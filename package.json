@@ -1,7 +1,7 @@
 {
   "name": "devcamper_api",
   "version": "1.0.0",
-  "description": "DEvcamper backend API",
+  "description": "Devcamper backend API",
   "main": "server.js",
   "scripts": {
     "test": "NODE_ENV=production node server",
@@ -14,7 +14,9 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.4.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-geocoder": "^4.2.0",
+    "slugify": "^1.6.6"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
