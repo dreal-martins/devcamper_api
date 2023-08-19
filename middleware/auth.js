@@ -14,9 +14,10 @@ exports.protect = asyncHandler(async (req, res, next) => {
     // Set token from Bearer token in header
     token = req.headers.authorization.split(" ")[1];
   }
-  //    else if (req.cookies.token) {
-  //     token = req.cookies.token;
-  //   }
+  // Set token from Cookie
+  // else if (req.cookies.token) {
+  //   token = req.cookies.token;
+  // }
 
   // Make sure token is exists
   if (!token) {
@@ -38,7 +39,7 @@ exports.authorize = (...roles) => {
     if (!roles.includes(req.user.role)) {
       return next(
         new ErrorResponse(
-          `${req.user.role} role is not authorize to this route`,
+          `${req.user.role} role is not authorized to this route`,
           403
         )
       );
